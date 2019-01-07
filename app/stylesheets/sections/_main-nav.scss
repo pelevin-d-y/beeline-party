@@ -10,7 +10,7 @@
   top: 40px;
 
   cursor: pointer;
-  background: #ffffff;
+  background: #000000;
   box-sizing: border-box;
   background-clip: content-box;
   width: 30px;
@@ -26,7 +26,7 @@
   &:after {
       content: "";
       position: absolute;
-      background: #ffffff;
+      background: #000000;
       height: 4px;
       width: 100%;
       right: 0;
@@ -35,7 +35,6 @@
       transform: rotate(0deg);
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   &:before {
       top: -10px;

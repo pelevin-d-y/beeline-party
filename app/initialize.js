@@ -4,7 +4,6 @@ import autocomplete from 'jquery-autocomplete'
 import fancybox from '@fancyapps/fancybox'
 import dataList from './data'
 
-
 var UserAgentString = navigator.userAgent;
 
 if(UserAgentString.indexOf('Trident/7.0') + 1) {
@@ -93,8 +92,6 @@ $("#navToggle").click(function(evt) {
 // var links = document.querySelectorAll('.main-nav__link')
 var links = $('.main-nav__link')
 
-console.log(links);
-
 links.each(function(a, link) {
   link.addEventListener('click', () => {
     $(".main-nav-overlay").removeClass("open");
@@ -103,8 +100,27 @@ links.each(function(a, link) {
   })
 })
 
-// next code
+// dress code
+var dressCodeNodes = $('.dress-code__type') 
 
+dressCodeNodes.each(function(index, el) {
+  $(el).mouseover(function() {
+    dressCodeNodes.each(function(index, title) {
+      $(title).removeClass('active')
+    })
+
+    $(el).addClass('active')
+    var img = $(el).data('img')
+    if (img === 'lady') {
+      $('.derss-code__lady').addClass('active')
+      $('.derss-code__gentleman').removeClass('active')
+    } else {
+      $('.derss-code__gentleman').addClass('active')
+      $('.derss-code__lady').removeClass('active')
+    }
+  })
+})
+// next code
 $('.container').click(function(evt) {
   evt.stopPropagation();
 })

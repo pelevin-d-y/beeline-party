@@ -22,25 +22,75 @@
 }
 
 .page-header__content {
-  max-width: 650px;
+  max-width: 620px;
   width: 100%;
+}
+
+.page-header__logo {
+  position: relative;
+  font-family: Geometria-Bold;
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-header__logo-beeline {
+  letter-spacing: 5px;
+}
+
+.page-header__logo-awards {
+  letter-spacing: 2px;
+}
+
+.page-header__logo div {
+  position: relative;
+  font-family: Geometria-medium;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  text-transform: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 1px;
+    width: 21%;
+    background: #000000;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 1px;
+    width: 21%;
+    background: #000000;
+  }
 }
 
 .page-header__text {
   max-width: 750px;
   width: 100%;
   margin-bottom: 10px;
-  padding-left: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
 
-  color: #436e9a;
-  line-height: 25px;
+  line-height: 27px;
+}
+
+.page-header__text span {
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
-  .page-header__text {
-    color: #fff;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
 }
 
 @media (max-width: 550px) {
@@ -49,6 +99,24 @@
   }
 
   .page-header__text {
-      font-size: 19px;
+    font-size: 14px;
+    line-height: 21px
+  }
+
+  .page-header__logo {
+    font-size: 53px;
+  }
+
+  .page-header__logo div {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .page-header__logo div {
+    &::after,
+    &::before {
+      width: 12%
+    }
   }
 }

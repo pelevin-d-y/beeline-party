@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Crystal</title>
+  <title>Beeline</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="http://crystalawardsparty.ru/assets/26c73aa/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <div class="bg"></div>
   <div>
     <div class="main-nav-overlay">
       <nav class="main-nav">
@@ -26,42 +27,58 @@
   <div id="fullpage">
     <header class="container page-header section">
       <div class="page-header__content">
-        <div class="page-header__img"><img src="./images/header.png" class="img"></div>
-        <div class="page-header__text">Только самых блистательных сотрудников мы приглашаем на празднование Нового 2018 года.</div>
-        <div class="page-header__text">Вас ждет яркий вечер и торжественное награждение самых лучших.</div>
+        <div class="page-header__logo"><span class="page-header__logo-beeline">Beeline </span><span class="page-header__logo-awards">Awards</span>
+          <div>время достижений</div>
+        </div>
+        <div class="page-header__text">Жизнь каждого из нас состоит из важных моментов, достижений и побед. Каждый день мы делаем все, ради того, что бы покорить какую либо вершину и стать сильнее. Но только собравшись в мощную сплоченную команду, можно достичь невероятных результатов. Сегодня здесь собрались лучшие из лучших, а это значит, что настало  <span>«время достижений»</span>
+        </div>
       </div>
     </header>
-    <section class="location container section">
-      <div class="location__content">
-        <div class="location__text">Мы ждем вас
-          <div class="location__data">25 января</div>
-          <div class="location__data-time">сбор гостей<br>
-            <div class="location__data-time-div">с<span class="location__data-time-before"> 18:00 </span>до<span class="location__data-time-after"> 19:00</span></div>
-          </div>
-        </div>
-        <div class="location__map"><a href="./images/map.png" data-fancybox class="location__map-link"><img src="./images/map.png" class="map"></a>
-          <div class="location__map-text">Вся информация о трансфере будет вам выслана дополнительно</div>
-        </div>
-      </div>
-    </section>
     <section class="container section">
       <div class="dress-code">
         <div class="dress-code__text">
           <div class="dress-code__title">Рекомендуемый DRESS CODE</div>
-          <div class="dress-code__section-title">Леди</div>
-          <div class="dress-code__section-text">Вечерние и коктейльные платья. Вечерний make-up, пайетки и аксессуары, подчеркивающие сияние вашей красоты.</div>
-          <div class="dress-code__section-title">Джентельмены</div>
-          <div class="dress-code__section-text">Black-tie, intelligent, casual и все, что сделает вас неотразимым. Приветствуются аксессуары в crystal стилистике.</div>
+          <div data-img="lady" class="dress-code__type active">
+            <div class="dress-code__section-title">Lady:</div>
+            <div class="dress-code__section-text">Вечерние или коктейльные платья. Вечерний make-up, аксессуары, элегантная прическа</div>
+          </div>
+          <div data-img="gentleman" class="dress-code__type">
+            <div class="dress-code__section-title">Gentleman:</div>
+            <div class="dress-code__section-text">Стильный костюм, галстук или бабочка, изысканный и утонченный образ.</div>
+          </div>
         </div>
-        <div class="dress-code__img"><img src="./images/people.png" class="derss-code__people"></div>
+        <div class="dress-code__img">
+          <div class="dress-code__img-wrapper derss-code__lady active"><img src="./images/lady.jpg" class="derss-code__people"></div>
+          <div class="dress-code__img-wrapper derss-code__gentleman"><img src="./images/gentleman.jpg" class="derss-code__people"></div>
+        </div>
+      </div>
+    </section>
+    <section class="location container section">
+      <div class="location__content">
+        <div class="location__text">Приглашаем вас
+          <div class="location__data">24 января</div>
+          <div class="location__data-time">сбор гостей<br>
+            <div class="location__data-time-div">с<span class="location__data-time-before"> 17:00 </span>до<span class="location__data-time-after"> 18:00</span></div>
+          </div>
+          <div class="location__data-address"> <span>Адрес:</span> ул. Левобережная 28 В,<br /> ресторан Голубое озеро</div>
+          <div class="location__data-description">* пропуск гостей на территорию <br /> осуществляется ровно с 17:00</div>
+        </div>
+        <div class="lacation__map-wrapper">
+          <div class="location__map gradient-box"><a href="./images/map.jpg" data-fancybox class="location__map-link"><img src="./images/map.jpg" class="map"></a></div>
+          <div class="location__map-text">Все подробности о трансфере на мероприятие вы узнаете в отдельном письме</div>
+        </div>
       </div>
     </section>
     <section class="container section">
       <div class="seating__content">
         <div class="seating__title">Рассадка</div>
         <form action="#" method="get" class="seating-form">
-          <input type="text" name="surname" placeholder="Введите ФИО" class="seating__input">
-          <button class="seating__button">Узнать номер стола</button>
+          <div class="seating__input-wrapper gradient-box">
+            <input type="text" name="surname" placeholder="Введите ФИО" class="seating__input">
+          </div>
+          <button class="btn seating__button"><span>Узнать номер стола</span>
+            <div class="gradient"></div>
+          </button>
         </form>
       </div>
     </section>

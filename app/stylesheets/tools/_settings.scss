@@ -1,10 +1,13 @@
+html {
+  background: #d5b52b;
+}
+
 body {
-  font-family: 'CenturyGothic', sans-serif;
+  font-family: 'Geometria-Medium', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(255, 255, 255);
+  color: #000000;
   font-size: 20px;
-  // text-shadow: 0 0 30px rgba(255,255,255, 0.5)
 }
 
 * {
@@ -28,36 +31,22 @@ li {
 
 .fp-tableCell {
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
 }
 
-canvas {
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-}
-
-#c1 {
-	opacity: 0;
-}
-
-#c2 {
-	background: #fff;
-}
-
-.filter {
-  // z-index: 10;
-  background: #CDB7FD;
-  position: fixed;
-  opacity: 0.5;
-  top: 0;left: 0;right: 0;bottom: 0;
-}
 
 img {
   max-width: 700px;
   width: 100%;
+}
+
+.bg {
+  background: url('../images/bg.png') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 .hidden {

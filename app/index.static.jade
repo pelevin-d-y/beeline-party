@@ -1,6 +1,6 @@
 doctype html
 head
-  title Crystal
+  title Beeline
   meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
   meta(name="viewport" content="width=device-width")
   meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
@@ -8,6 +8,7 @@ head
   link(rel="stylesheet" href="stylesheets/app.css")
   link(rel="shortcut icon" href="http://crystalawardsparty.ru/assets/26c73aa/images/favicon.ico" type="image/x-icon")
 body
+  .bg
   div
     .main-nav-overlay
       nav.main-nav
@@ -34,18 +35,43 @@ body
   div#fullpage
     header.container.page-header.section
       .page-header__content
-        .page-header__img
-          img(class='img' src='./images/header.png')
+        .page-header__logo
+          span.page-header__logo-beeline Beeline 
+          span.page-header__logo-awards Awards
+          div
+            | время достижений
         .page-header__text
-          | Только самых блистательных сотрудников мы приглашаем на празднование Нового 2018 года.
-        .page-header__text
-          | Вас ждет яркий вечер и торжественное награждение самых лучших.
+          | Жизнь каждого из нас состоит из важных моментов, достижений и побед. Каждый день мы делаем все, ради того, что бы покорить какую либо вершину и стать сильнее. Но только собравшись в мощную сплоченную команду, можно достичь невероятных результатов. Сегодня здесь собрались лучшие из лучших, а это значит, что настало 
+          = ' '
+          span «время достижений»
+        
+    section.container.section
+      .dress-code
+        .dress-code__text
+          .dress-code__title
+            | Рекомендуемый DRESS CODE
+          .dress-code__type.active(data-img="lady")
+            .dress-code__section-title
+              | Lady:
+            .dress-code__section-text
+              | Вечерние или коктейльные платья. Вечерний make-up, аксессуары, элегантная прическа
+          .dress-code__type(data-img="gentleman")
+            .dress-code__section-title
+              | Gentleman:
+            .dress-code__section-text
+              | Стильный костюм, галстук или бабочка, изысканный и утонченный образ.
+        .dress-code__img
+          .dress-code__img-wrapper.derss-code__lady.active
+            img(src="./images/lady.jpg" class="derss-code__people")
+          .dress-code__img-wrapper.derss-code__gentleman
+            img(src="./images/gentleman.jpg" class="derss-code__people")
+
     section.location.container.section
       .location__content
         .location__text
-          | Мы ждем вас
+          | Приглашаем вас
           .location__data
-            | 25 января
+            | 24 января
           .location__data-time
             | сбор гостей
             br
@@ -53,40 +79,33 @@ body
               | с
               span.location__data-time-before
                 = ' '
-                | 18:00
+                | 17:00
                 =' '
               | до
               span.location__data-time-after
                 = ' '
-                | 19:00
-        .location__map
-          a(href="./images/map.png" data-fancybox).location__map-link
-            img(class='map' src='./images/map.png')
+                | 18:00
+          .location__data-address
+              |  <span>Адрес:</span> ул. Левобережная 28 В,<br /> ресторан Голубое озеро
+          .location__data-description
+            | * пропуск гостей на территорию <br /> осуществляется ровно с 17:00
+        .lacation__map-wrapper
+          .location__map.gradient-box
+            a(href="./images/map.jpg" data-fancybox).location__map-link
+              img(class='map' src='./images/map.jpg')
           .location__map-text
-            | Вся информация о трансфере будет вам выслана дополнительно
-    section.container.section
-      .dress-code
-        .dress-code__text
-          .dress-code__title
-            | Рекомендуемый DRESS CODE
-          .dress-code__section-title
-            | Леди
-          .dress-code__section-text
-            | Вечерние и коктейльные платья. Вечерний make-up, пайетки и аксессуары, подчеркивающие сияние вашей красоты.
-          .dress-code__section-title
-            | Джентельмены
-          .dress-code__section-text
-            | Black-tie, intelligent, casual и все, что сделает вас неотразимым. Приветствуются аксессуары в crystal стилистике.
-        .dress-code__img
-          img(src="./images/people.png" class="derss-code__people")
+            | Все подробности о трансфере на мероприятие вы узнаете в отдельном письме
     section.container.section
       .seating__content
         .seating__title
           | Рассадка
         form(action="#", method="get").seating-form
-          input(type="text" name="surname" placeholder = "Введите ФИО" class = "seating__input")
-          button.seating__button
-            | Узнать номер стола
+          .seating__input-wrapper.gradient-box
+            input(type="text" name="surname" placeholder="Введите ФИО" class="seating__input")
+          button.btn.seating__button
+            span
+              | Узнать номер стола
+            .gradient
     section.container.section
       .contacts
         .contacts__questions

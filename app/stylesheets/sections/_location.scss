@@ -1,4 +1,7 @@
 .location__content {
+  position: relative;
+  z-index: 2;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -6,19 +9,19 @@
 }
 
 .location__text {
-  max-width: 280px;
+  max-width: 300px;
   width: 100%;
+  
+  border-radius: 10px;
 
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .location__text span {
   font-size: 35px;
   font-weight: bold;
-  color: rgb(233, 200, 56);
   text-shadow: 0 0 10px rgba(255,210,119, 0.5);
 }
 
@@ -36,28 +39,76 @@
   justify-content: center;
   align-items: center;
 
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .location__data {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
-  color: rgb(233, 200, 56);
   text-shadow: 0 0 10px rgba(255,210,119, 0.5);
-  margin-top: 5px;
+  margin-top: 2px;
+}
+
+.location__data-address {
+  margin-top: 7px;
+  text-transform: none;
+}
+
+.location__data-address span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: none;
+
+  font-weight: bold;
+}
+
+.location__data-description {
+  display: inline-block;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  text-align: center;
+  color: #5e5e5e;
+  font-size: 11px;
+
+  text-transform: none;
+}
+
+.gradient-box {
+  position: relative;
+
+  $border: 5px;
+  color: #FFF;
+  background: #ffffff;
+  background-clip: padding-box; 
+  border: solid $border transparent; 
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to right, #f7e31f, #c59813);
+  }
+}
+
+.map {
+  display: block;
 }
 
 .location__map-text {
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   max-width: 650px;
   width: 100%;
   margin-top: 20px;
+  font-size: 19px;
 }
 
-.location__data-time {
-  margin-top: 15px;
-  vertical-align: middle;
-}
+
 
 @media (max-width: 768px) {
   .location__content {
@@ -76,15 +127,23 @@
   }
 
   .location__data {
-    font-size: 29px;
+    font-size: 26px;
   }
 
   .location__text span {
-    font-size: 29px;
+    font-size: 26px;
+  }
+
+  .location__data-address span {
+    font-size: 16px;
+  }
+
+  .location__data-description {
+    margin-top: 5px;
   }
 
   .location__map-text {
     margin-top: 7px;
-    font-size: 17px;
+    font-size: 16px;
   }
 }

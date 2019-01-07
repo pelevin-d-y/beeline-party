@@ -9,7 +9,6 @@
 .dress-code__text {
   max-width: 600px;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .dress-code__title {
@@ -21,20 +20,63 @@
 }
 
 .dress-code__section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
   margin-bottom: 10px;
 
   font-size: 18px;
   font-weight: bold;
-  // color: #e9c838;
-  // text-shadow: 0 0 10px rgba(255, 210, 119, 0.5);
+}
+
+.dress-code__type {
+  cursor: pointer;
+}
+
+
+.dress-code__type.active .dress-code__section-title {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+  }
 }
 
 .dress-code__section-text {
   margin-bottom: 20px;
 }
 
-.derss-code__people {
+.dress-code__img {
+  position: relative;
   max-width: 380px;
+  width: 100%;
+  height: 475px;
+}
+
+.derss-code__people {
+  display: block;
+}
+
+.dress-code__img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 365px;
+  width: 100%;
+  height: 456px;
+  overflow: hidden;
+
+  transition: transform 0.3s linear;
+}
+
+.dress-code__img-wrapper.active {
+  z-index: 2;
+  transform: translate(-15px, 15px);
 }
 
 @media (max-width: 768px) {
@@ -49,6 +91,10 @@
 
   .dress-code__section-text {
     font-size: 17px;
+  }
+
+  .dress-code__type.active .dress-code__section-title::after {
+    display: none;
   }
 }
 

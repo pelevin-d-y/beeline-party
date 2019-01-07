@@ -1912,8 +1912,6 @@ popupButtonClose.click(function () {
 // var links = document.querySelectorAll('.main-nav__link')
 var links = (0, _jquery2.default)('.main-nav__link');
 
-console.log(links);
-
 links.each(function (a, link) {
   link.addEventListener('click', function () {
     (0, _jquery2.default)(".main-nav-overlay").removeClass("open");
@@ -1922,8 +1920,27 @@ links.each(function (a, link) {
   });
 }
 
-// next code
+// dress code
+);var dressCodeNodes = (0, _jquery2.default)('.dress-code__type');
 
+dressCodeNodes.each(function (index, el) {
+  (0, _jquery2.default)(el).mouseover(function () {
+    dressCodeNodes.each(function (index, title) {
+      (0, _jquery2.default)(title).removeClass('active');
+    });
+
+    (0, _jquery2.default)(el).addClass('active');
+    var img = (0, _jquery2.default)(el).data('img');
+    if (img === 'lady') {
+      (0, _jquery2.default)('.derss-code__lady').addClass('active');
+      (0, _jquery2.default)('.derss-code__gentleman').removeClass('active');
+    } else {
+      (0, _jquery2.default)('.derss-code__gentleman').addClass('active');
+      (0, _jquery2.default)('.derss-code__lady').removeClass('active');
+    }
+  });
+}
+// next code
 );(0, _jquery2.default)('.container').click(function (evt) {
   evt.stopPropagation();
 });

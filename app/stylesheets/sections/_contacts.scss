@@ -1,7 +1,6 @@
 .contacts {
   margin-left: 9vw;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.5);
   line-height: 30px;
   text-shadow: none;
 }
@@ -18,12 +17,12 @@
 }
 
 .contacts__email a {
-  color: #fff;
+  color: #000000;
   text-decoration: underline;
 }
 
 .contacts__tel {
-  color: #fff;
+  color: #000000;
 }
 
 @media (max-width: 768px) {

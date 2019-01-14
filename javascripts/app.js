@@ -1819,6 +1819,10 @@ var _fancybox = require('@fancyapps/fancybox');
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
+var _slickCarousel = require('slick-carousel');
+
+var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
+
 var _data = require('./data');
 
 var _data2 = _interopRequireDefault(_data);
@@ -1959,7 +1963,34 @@ dressCodeNodes.each(function (index, el) {
 
 (0, _jquery2.default)('.popup').click(function (evt) {
   evt.stopPropagation();
-});
+}
+
+// slider
+// $('.photos').slick({
+//   centerMode: true,
+//   centerPadding: '60px',
+//   slidesToShow: 3,
+//   prevArrow: $('.next'),
+//   nextArrow: $('.prev'),
+//   responsive: [
+//     {
+//       breakpoint: 1200,
+//       settings: {
+//         slidesToShow: 2
+//       }
+//     },
+
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         centerMode: false,
+//         centerPadding: '0',
+//         slidesToShow: 1
+//       }
+//     },
+//   ]
+// });
+);
 
 });
 

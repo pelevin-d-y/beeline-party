@@ -41,13 +41,12 @@
   margin: 30px auto;
   padding: 100px 10px 20px 10px;
 
-  border-radius: 5px;
-  background: #fff;
+  background: linear-gradient(to right, #f7e31f, #c59813);
   overflow: auto;
 }
 
 .popup-close {
-  left: 15px;
+  right: 15px;
   top: 15px;
   position: absolute;
   width: 25px;

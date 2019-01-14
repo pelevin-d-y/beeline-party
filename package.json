@@ -24,7 +24,8 @@
     "postcss-inline-svg": "^3.0.0",
     "postcss-svgo": "^2.1.6",
     "sass-brunch": "^2.10.4",
-    "siema": "^1.4.6"
+    "siema": "^1.4.6",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",

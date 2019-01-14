@@ -2,6 +2,7 @@ import $ from "jquery"
 import fullpage from 'fullpage.js'
 import autocomplete from 'jquery-autocomplete'
 import fancybox from '@fancyapps/fancybox'
+import slick from 'slick-carousel'
 import dataList from './data'
 
 var UserAgentString = navigator.userAgent;
@@ -140,3 +141,29 @@ $('#fullpage').click(function(evt) {
 $('.popup').click(function(evt) {
   evt.stopPropagation();
 })
+
+// slider
+// $('.photos').slick({
+//   centerMode: true,
+//   centerPadding: '60px',
+//   slidesToShow: 3,
+//   prevArrow: $('.next'),
+//   nextArrow: $('.prev'),
+//   responsive: [
+//     {
+//       breakpoint: 1200,
+//       settings: {
+//         slidesToShow: 2
+//       }
+//     },
+
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         centerMode: false,
+//         centerPadding: '0',
+//         slidesToShow: 1
+//       }
+//     },
+//   ]
+// });

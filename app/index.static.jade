@@ -18,10 +18,10 @@ body
               | Главная
           li
             a(href="#page-2").main-nav__link
-              | Место проведния
+              | Dress code
           li
             a(href="#page-3").main-nav__link
-              | Dress code
+              | Место проведния
           li
             a(href="#page-4").main-nav__link
               | Рассадка
@@ -30,7 +30,7 @@ body
               | Контакты
           //- li
           //-   a(href="#page-6").main-nav__link
-          //-     | Фото и видео
+          //-     | Фото
     .navBurger#navToggle
   div#fullpage
     header.container.page-header.section
@@ -120,18 +120,26 @@ body
                | mvgureva@rnd.beeline.ru
           .contacts__tel
             | Тел.: +7 961 274 50 63
-    //- section.container.section
-    //-   .foto-video__content
-    //-     a(href="#").foto-video-container
-    //-       .foto-video-title
-    //-         i(class="fa fa-camera-retro")
-    //-       .foto-video__text
-    //-         | Видео будет доступно после 30 января
-    //-     a(href="#").foto-video-container
-    //-       .foto-video-title
-    //-         i(class="fa fa-video-camera")
-    //-       .foto-video__text
-    //-         | Видео будет доступно после 30 января
+    //- section.container.section.section-photo
+      .photo-video__content
+        .prev
+          i(class="fa fa-angle-right")
+        .next
+          i(class="fa fa-angle-left")
+        .photos
+          .photos-slide
+            img(src="./images/lady.jpg")
+          .photos-slide
+            img(src="./images/gentleman.jpg")
+          .photos-slide
+            img(src="./images/lady.jpg")
+          .photos-slide
+            img(src="./images/gentleman.jpg")
+          .photos-slide
+            img(src="./images/lady.jpg")
+          .photos-slide
+            img(src="./images/gentleman.jpg")
+
   .popup
     .popup-overlay
       .popup-container

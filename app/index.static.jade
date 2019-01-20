@@ -22,11 +22,11 @@ body
           li
             a(href="#page-3").main-nav__link
               | Место проведения
-          //- li
-          //-   a(href="#page-4").main-nav__link
-          //-     | Рассадка
           li
             a(href="#page-4").main-nav__link
+              | Рассадка
+          li
+            a(href="#page-5").main-nav__link
               | Контакты
           //- li
           //-   a(href="#page-6").main-nav__link
@@ -92,17 +92,17 @@ body
               img(class='map' src='./images/map.jpg')
           .location__map-text
             | Все подробности о трансфере на мероприятие вы узнаете в отдельном письме
-    //- section.container.section
-    //-   .seating__content
-    //-     .seating__title
-    //-       | Рассадка
-    //-     form(action="#", method="get").seating-form
-    //-       .seating__input-wrapper.gradient-box
-    //-         input(type="text" name="surname" placeholder="Введите ФИО" class="seating__input")
-    //-       button.btn.seating__button
-    //-         span
-    //-           | Узнать номер стола
-    //-         .gradient
+    section.container.section
+      .seating__content
+        .seating__title
+          | Рассадка
+        form(action="#", method="get").seating-form
+          .seating__input-wrapper.gradient-box
+            input(type="text" name="surname" placeholder="Введите ФИО" class="seating__input")
+          button.btn.seating__button
+            span
+              | Узнать номер стола
+            .gradient
     section.container.section
       .contacts
         .contacts__questions

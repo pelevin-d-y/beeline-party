@@ -3,7 +3,7 @@ import fullpage from 'fullpage.js'
 import autocomplete from 'jquery-autocomplete'
 import fancybox from '@fancyapps/fancybox'
 import slick from 'slick-carousel'
-import dataList from './data'
+import dataList from './myjsonfile'
 
 var UserAgentString = navigator.userAgent;
 
@@ -27,7 +27,7 @@ jQuery('.location__map-link').fancybox({
 
 $(document).ready(function() {
   $('#fullpage').fullpage({
-    anchors:['page-1','page-2', 'page-3', 'page-4'],
+    anchors:['page-1','page-2', 'page-3', 'page-4', 'page-5'],
     menu: '#menu',
     navigation: true
   });
@@ -39,7 +39,7 @@ var formButton = $('.seating__button');
 var popupButtonClose = $('.popup-close');
 var seatInput = jQuery(".seating__input");
 
-const FullNameArray = dataList.map((element) => {
+const FullNameArray = dataList.table.map((element) => {
   return element['ФИО'];
 })
 
@@ -52,12 +52,12 @@ seatInput.autocomplete({
 formButton.click(function(evt) {
   evt.preventDefault();
 
-  var coincidence = dataList.some((element) => {
+  var coincidence = dataList.table.some((element) => {
     return seatInput.val() === element['ФИО']
   });
 
   if (coincidence) {
-    dataList.forEach((element) => {
+    dataList.table.forEach((element) => {
       if (seatInput.val() === element['ФИО']) {
         $('.popup__text').removeClass('hidden');
         $('.popup__number').text(element['стол']);
